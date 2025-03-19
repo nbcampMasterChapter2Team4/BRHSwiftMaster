@@ -7,6 +7,8 @@
 
 import Foundation
 
-print("Hello, World!")
-print("Commit Test")
+let essentialQuestionOne = EssentialQuestionOne()
 
+essentialQuestionOne.sum(3, 5)
+print(essentialQuestionOne.sum(3, 5))
+essentialQuestionOne.calculate(7, 8, closure: essentialQuestionOne.sum)
