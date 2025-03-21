@@ -38,25 +38,50 @@ print(essentialQuestionThree.d([1, 2, 3, 4, 5, 6, 7]))
 // print(essentialQuestionThree.d(["다", "라", "마", "바", "사", "아", "자"]))
 
 // MARK: - 도전 문제 1
-let car = Car(brand: "BMW", model: "520i", year: 2025, engine: Engine(engineType: .gasoline, mileAge: 10, horsePower: 350))
+let car = Car(brand: "BMW", model: "520i", year: 2025, engine: Engine(mainEngineType: .gasoline, electricMotor: false, mileAge: 10, horsePower: 350))
 car.drive()
 car.stop()
 car.charge()
 car.refuel()
+print("---------------------------------------")
 
-let electricCar = ElectricCar(brand: "Tesla", model: "Model 3", year: 2024, engine: ElectricEngine(engineType: .electric, mileAge: 15, horsePower: 280))
+let electricCar = ElectricCar(brand: "Tesla", model: "Model 3", year: 2024, engine: ElectricEngine(mainEngineType: .electric, electricMotor: false, mileAge: 15, horsePower: 280))
 
 electricCar.drive()
 electricCar.stop()
 electricCar.charge()
 electricCar.refuel()
+print("---------------------------------------")
 
-let hybridCar = HybridCar(brand: "Hyundai", model: "Granduer", year: 2023, engine: HybridEngine(engineType: .gasoline, mileAge: 20, horsePower: 250))
+let hybridCar = HybridCar(brand: "Hyundai", model: "Granduer", year: 2023, engine: HybridEngine(mainEngineType: .gasoline, electricMotor: true, mileAge: 20, horsePower: 250))
 
 hybridCar.drive()
 hybridCar.stop()
 hybridCar.charge()
 hybridCar.refuel()
-hybridCar.switchEngine(to: hybridCar.engine.engineType)
+hybridCar.switchEngine(to: hybridCar.engine.mainEngineType)
+hybridCar.switchEngine(to: hybridCar.engine.mainEngineType)
 print("---------------------------------------")
-hybridCar.switchEngine(to: hybridCar.engine.engineType)
+
+let car2 = Car2(brand: "Toyota", model: "Camry", year: 2020, engine: Engine(mainEngineType: .gasoline, electricMotor: false, mileAge: 17, horsePower: 220))
+car2.drive()
+car2.stop()
+car2.refuel()
+print("---------------------------------------")
+
+let electricCar2 = ElectricCar2(brand: "Porsche", model: "Taykan", year: 2022, engine: ElectricEngine(mainEngineType: .electric, electricMotor: false, mileAge: 12, horsePower: 400))
+
+electricCar2.drive()
+electricCar2.stop()
+electricCar2.charge()
+print("---------------------------------------")
+
+let hybridCar2 = HybridCar2(brand: "Lexus", model: "es300h", year: 2026, engine: HybridEngine(mainEngineType: .gasoline, electricMotor: true, mileAge: 22, horsePower: 300))
+
+hybridCar2.drive()
+hybridCar2.stop()
+hybridCar2.refuel()
+hybridCar2.charge()
+hybridCar2.switchEngine(to: hybridCar2.engine.mainEngineType)
+print(hybridCar2.engine.mainEngineType)
+print("---------------------------------------")
