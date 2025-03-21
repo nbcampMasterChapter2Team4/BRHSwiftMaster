@@ -31,10 +31,15 @@ print(result2)
 //MARK: - 필수 문제 3
 let essentialQuestionThree = EssentialQuestionThree()
 print(essentialQuestionThree.a([1, 2, 3, 4, 5]))
+print(essentialQuestionThree.aa([3, 4, 5, 6, 7]))
 print(essentialQuestionThree.b(["가", "나", "다", "라", "마"]))
+print(essentialQuestionThree.bb(["다", "라", "마", "바", "사"]))
 print(essentialQuestionThree.c([2, 3, 4, 5, 6]))
+print(essentialQuestionThree.cc([2, 3, 4, 5, 6]))
+print(essentialQuestionThree.cc([true, false, true, false, true]))
 print(essentialQuestionThree.b(["나", "다", "라", "마", "바", "사", "아"]))
 print(essentialQuestionThree.d([1, 2, 3, 4, 5, 6, 7]))
+print(essentialQuestionThree.dd([1, 2, 3, 4, 5, 6, 7, 8, 9]))
 
 // ["다", "라", "마", "바", "사", "아", "자"] String 배열은
 // Numeric 프로토콜을 준수하지 않기 때문에 아래 코드는 컴파일 에러를 발생하게 됨

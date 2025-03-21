@@ -19,6 +19,17 @@ final class EssentialQuestionThree {
         return result
     }
     
+    // 해설 자료 참고
+    func aa(_ array: [Int]) -> [Int] {
+        array.enumerated()
+            .filter { index, _ in
+                index.isMultiple(of: 2)
+            }
+            .map { _, value in
+                value
+            }
+    }
+    
     func b(_ array: [String]) -> [String] {
         var result: [String] = []
         
@@ -28,6 +39,17 @@ final class EssentialQuestionThree {
             }
         }
         return result
+    }
+    
+    // 해설 자료 참고
+    func bb(_ array: [String]) -> [String] {
+        array.enumerated()
+            .filter { index, _ in
+                index.isMultiple(of: 2)
+            }
+            .map { _, value in
+                value
+            }
     }
     
     func c<T>(_ array: [T]) -> [T] {
@@ -41,6 +63,17 @@ final class EssentialQuestionThree {
         return result
     }
     
+    // 해설 자료 참고
+    func cc<T>(_ array: [T]) -> [T] {
+        array.enumerated()
+            .filter { index, _ in
+                index.isMultiple(of: 2)
+            }
+            .map { _, value in
+                value
+            }
+    }
+    
     func d<T>(_ array: [T]) -> [T] where T: Numeric {
         var result: [T] = []
         
@@ -50,5 +83,16 @@ final class EssentialQuestionThree {
             }
         }
         return result
+    }
+    
+    // 해설 자료 참고
+    func dd<T: Numeric>(_ array: [T]) -> [T] {
+        array.enumerated()
+            .filter { index, _ in
+                index.isMultiple(of: 2)
+            }
+            .map { _, value in
+                value
+            }
     }
 }
