@@ -17,13 +17,16 @@ essentialQuestionOne.calculate(7, 8, closure: essentialQuestionOne.sum)
 let essentialQuestionTwo = EssentialQuestionTwo()
 print(essentialQuestionTwo.numbers)
 print(essentialQuestionTwo.result)
+print(essentialQuestionTwo.stringResult)
 print(essentialQuestionTwo.result2)
 
 let result = essentialQuestionTwo.myMap([1, 2, 3, 4, 5]) { num in
     String(num)
 }
+let result2 = essentialQuestionTwo.myMap2([3, 4, 5, 6, 7], closure: String.init)
 
 print(result)
+print(result2)
 
 //MARK: - 필수 문제 3
 let essentialQuestionThree = EssentialQuestionThree()

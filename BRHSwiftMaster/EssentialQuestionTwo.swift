@@ -13,8 +13,14 @@ final class EssentialQuestionTwo {
     // 빈 배열의 String 배열에서 map을 사용하여 값 할당
     // lazy 키워드를 사용하여 사용 시 메모리에 할당
     lazy var result: [String] = numbers.map { String($0) }
+    // 해설 자료 참고
+    lazy var stringResult: [String] = numbers.map(String.init)
     
-    lazy var result2: [String] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].filter { $0 % 2 == 0}.map { String($0) }
+    lazy var result2: [String] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].filter { $0 % 2 == 0 }.map { String($0) }
+    // 해설 자료 참고
+    lazy var stringResult2: [String] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        .filter { $0.isMultiple(of: 2) }
+        .map(String.init)
     
     let converting: (Int) -> String = { num in
         return String(num)
@@ -28,6 +34,11 @@ final class EssentialQuestionTwo {
         }
         
         return result
+    }
+    
+    // 해설 자료 참고
+    func myMap2(_ array: [Int], closure: (Int) -> String) -> [String] {
+        array.map(closure)
     }
     
 }
